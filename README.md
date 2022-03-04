@@ -1,4 +1,4 @@
-# vue3_practice_week5
+# vue3_practice_week6
 
 ## 練習目標
 - 使用 Vue Cli 完成路由設定

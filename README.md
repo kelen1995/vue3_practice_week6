@@ -1,24 +1,8 @@
-# vue3_practice_week6
+# vue3_practice_week5
 
-## Project setup
-```
-npm install
-```
+## 練習目標
+- 使用 Vue Cli 完成路由設定
+- 在 Vue Cli 中完成登入、前台表單驗證功能
+- 建立 .env 檔案內容
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[任務拆解](https://hackmd.io/WVEsZxClR5iG6aYe5CLB-A?view)

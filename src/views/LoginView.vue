@@ -1,6 +1,6 @@
 <template>
   <h1>登入</h1>
-  <input type="button" value="登入" @click="login">
+  <input type="button" value="登入" @click="login" />
 </template>
 
 <script>

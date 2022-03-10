@@ -78,7 +78,7 @@
       </tfoot>
     </table>
     <div class="my-5 row justify-content-center">
-      <!-- <v-form
+      <v-form
         ref="form"
         class="col-md-6"
         v-slot="{ errors }"
@@ -157,7 +157,7 @@
         <div class="text-end">
           <button type="submit" class="btn btn-danger">送出訂單</button>
         </div>
-      </v-form> -->
+      </v-form>
     </div>
   </div>
 </template>

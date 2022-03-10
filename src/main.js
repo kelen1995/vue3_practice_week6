@@ -5,7 +5,8 @@ import 'bootstrap';
 import VueAxios from 'vue-axios';
 import * as VeeValidate from 'vee-validate';
 import VeeValidateRules from '@vee-validate/rules';
-import * as VeeValidateI18n from '@vee-validate/i18n';
+import { localize } from '@vee-validate/i18n';
+import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
@@ -31,11 +32,8 @@ Object.keys(VeeValidateRules).forEach((rule) => {
   }
 });
 
-// 讀取外部的資源
-VeeValidateI18n.loadLocaleFromURL('https://unpkg.com/@vee-validate/i18n@4.0.2/dist/locale/zh_TW.json');
-
 // Activate the locale
 VeeValidate.configure({
-  generateMessage: VeeValidateI18n.localize('zh_TW'),
+  generateMessage: localize({ zh_TW: zhTW }),
   validateOnInput: true, // 調整為：輸入文字時，就立即進行驗證
 });

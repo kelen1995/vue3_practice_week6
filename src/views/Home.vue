@@ -10,12 +10,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'Home',
-  components: {
-  },
-  mounted() {
-  },
+  components: {},
+  mounted() {},
 };
 </script>

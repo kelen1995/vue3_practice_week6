@@ -67,10 +67,10 @@
             </tr>
           </tbody>
         </table>
-        <!-- <pagination
+        <pagination
           :pagination="pagination"
           @switch-page="getProducts"
-        ></pagination> -->
+        ></pagination>
       </div>
     </div>
   </div>
@@ -78,6 +78,7 @@
 
 <script>
 import productModal from '../components/productModal.vue';
+import pagination from '../components/pagination.vue';
 
 export default {
   data() {
@@ -98,6 +99,7 @@ export default {
   },
   components: {
     productModal,
+    pagination,
   },
   methods: {
     getProducts(page = 1) {

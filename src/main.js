@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 
 import axios from 'axios';
+import 'bootstrap';
 import VueAxios from 'vue-axios';
 import * as VeeValidate from 'vee-validate';
 import VeeValidateRules from '@vee-validate/rules';
@@ -31,7 +32,7 @@ Object.keys(VeeValidateRules).forEach((rule) => {
 });
 
 // 讀取外部的資源
-VeeValidateI18n.loadLocaleFromURL('../public/zh_TW.json');
+VeeValidateI18n.loadLocaleFromURL('https://unpkg.com/@vee-validate/i18n@4.0.2/dist/locale/zh_TW.json');
 
 // Activate the locale
 VeeValidate.configure({

@@ -28,6 +28,13 @@ const routes = [
     path: '/admin',
     name: 'Backend',
     component: () => import('../views/BackendView.vue'),
+    children: [
+      {
+        path: 'products',
+        name: 'BackendProducts',
+        component: () => import('../views/BackendProducts.vue'),
+      },
+    ],
   },
 
 ];

@@ -8,10 +8,6 @@
           @add-carts="updateCarts"
           ref="productModal"
         ></product-modal>
-        <!-- <del-product-modal
-          @delete-product="deleteCarts"
-          ref="delModal"
-        ></del-product-modal> -->
 
         <table class="table align-middle">
           <thead>
@@ -117,7 +113,7 @@ export default {
         });
     },
     openProductModal(product) {
-      this.tempProduct = { qty: 1, ...product };
+      this.tempProduct = { ...product };
       this.$refs.productModal.openModal();
     },
     hideProductModal() {

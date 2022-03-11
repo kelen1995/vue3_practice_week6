@@ -78,6 +78,7 @@ export default {
   },
   methods: {
     openModal() {
+      this.productQty = 1;
       this.modal.show();
     },
     hideModal() {

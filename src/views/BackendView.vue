@@ -11,7 +11,7 @@
 export default {
   methods: {
     logout() {
-      document.cookie = 'hexToken=;expires=;';
+      document.cookie = 'hextoken=;expires=;';
       this.$router.push('/login');
     },
   },

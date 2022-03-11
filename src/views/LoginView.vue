@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  margin-top: 50px;
+}
 .form-signin {
   width: 100%;
   max-width: 330px;

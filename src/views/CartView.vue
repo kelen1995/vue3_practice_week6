@@ -126,7 +126,7 @@
             class="form-control"
             :class="{ 'is-invalid': errors['電話'] }"
             placeholder="請輸入電話"
-            rules="required|numeric|min:8"
+            :rules="{required:true, numeric:true, min:8, regex: /^09/ }"
             v-model.lazy="order.user.tel"
           ></VField>
           <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>

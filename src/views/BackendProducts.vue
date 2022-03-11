@@ -116,8 +116,8 @@ export default {
           this.toggleProductModal();
           break;
         case 'delete':
-          this.toggleDelProductModal('open');
           this.tempProduct = { ...product };
+          this.toggleDelProductModal('open');
           break;
         default:
           break;

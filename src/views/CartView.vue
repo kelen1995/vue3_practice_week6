@@ -1,6 +1,9 @@
 <template>
   <!-- 元件 -->
-  <delProductModal @delete-product="deleteCarts" ref="delModal"></delProductModal>
+  <delProductModal
+    @delete-product="deleteCarts"
+    ref="delModal"
+  ></delProductModal>
   <!-- 購物車列表 -->
   <div class="container">
     <div class="text-end">
@@ -78,7 +81,7 @@
       </tfoot>
     </table>
     <div class="my-5 row justify-content-center">
-      <v-form
+      <VForm
         ref="form"
         class="col-md-6"
         v-slot="{ errors }"
@@ -155,9 +158,17 @@
           ></textarea>
         </div>
         <div class="text-end">
-          <button type="submit" class="btn btn-danger">送出訂單</button>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            :disabled="
+              this.cart.carts.length < 1 || Object.keys(errors).length > 0
+            "
+          >
+            送出訂單
+          </button>
         </div>
-      </v-form>
+      </VForm>
     </div>
   </div>
 </template>
@@ -249,20 +260,12 @@ export default {
       this.$refs.delModal.hideModal();
     },
     submitOrder() {
-      if (this.cart.carts.length < 1) {
-        // 若購物車沒有資料，不發出請求
-        alert('購物車目前沒有商品');
-        return;
-      }
       const loader = this.$loading.show();
 
       this.axios
-        .post(
-          `${this.apiUrl}/api/${this.apiPath}/order`,
-          {
-            data: { ...this.order },
-          },
-        )
+        .post(`${this.apiUrl}/api/${this.apiPath}/order`, {
+          data: { ...this.order },
+        })
         .then((res) => {
           loader.hide();
           const { message, total } = res.data;

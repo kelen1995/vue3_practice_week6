@@ -86,7 +86,7 @@
       >
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <v-field
+          <VField
             id="email"
             name="email"
             type="email"
@@ -95,13 +95,13 @@
             placeholder="請輸入 Email"
             rules="required|email"
             v-model.lazy="order.user.email"
-          ></v-field>
-          <error-message name="email" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="name" class="form-label">收件人姓名</label>
-          <v-field
+          <VField
             id="name"
             name="姓名"
             type="text"
@@ -110,13 +110,13 @@
             placeholder="請輸入姓名"
             rules="required"
             v-model.lazy="order.user.name"
-          ></v-field>
-          <error-message name="姓名" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="tel" class="form-label">收件人電話</label>
-          <v-field
+          <VField
             id="tel"
             name="電話"
             type="tel"
@@ -125,13 +125,13 @@
             placeholder="請輸入電話"
             rules="required|numeric|min:8"
             v-model.lazy="order.user.tel"
-          ></v-field>
-          <error-message name="電話" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="address" class="form-label">收件人地址</label>
-          <v-field
+          <VField
             id="address"
             name="地址"
             type="address"
@@ -140,8 +140,8 @@
             placeholder="請輸入地址"
             rules="required"
             v-model.lazy="order.user.address"
-          ></v-field>
-          <error-message name="地址" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
